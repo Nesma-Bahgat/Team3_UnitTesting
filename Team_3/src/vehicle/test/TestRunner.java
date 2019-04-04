@@ -11,7 +11,7 @@ public class TestRunner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Result result=new JUnitCore().run(App2Test.class);
+		Result result=new JUnitCore().run(App2Test.class,App5Test.class);
 		System.out.println("Running Test Cases: "+result.getRunCount());
 		for(Failure fail: result.getFailures())
 		{
