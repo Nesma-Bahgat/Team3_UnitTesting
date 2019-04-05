@@ -8,10 +8,7 @@ public class Main {
 	
 	public static void vidMain()
 	{
-		State state = new State();
-		state.vidGoToNextState();
-		LCD.vidOutput(Global.iState);
-		Motor.vidOutput(Global.iState);
+
 		
 	}
 }

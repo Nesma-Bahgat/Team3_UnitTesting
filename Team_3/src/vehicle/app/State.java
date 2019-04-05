@@ -16,16 +16,13 @@ public class State {
 	
 	public boolean bValidateLowPerformance() 
 	{
-		boolean ret =false;
-		if( (Temp.iRreadT1() < 60 ) && (Temp.iRreadT2() > 50 )  )
-		{
-			ret= true;
-		}
-		else
-		{
-			ret= false;
-		}
-		return ret;
+		return false;
+	}
+	public boolean validateHighPerformance()
+	{
+				
+			return true;
+		
 	}
 
 }

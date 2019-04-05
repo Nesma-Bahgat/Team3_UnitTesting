@@ -26,8 +26,8 @@ public class App5Test {
 				  () -> assertTrue(state.bValidateLowPerformance()) ,
 				  () -> assertEquals(1,Temp.validateCallReadT1),
 				  () -> assertEquals(1,Temp.validateCallReadT2),
-				  () -> assertTrue(Temp.iRreadT1()<60),
-				  () -> assertTrue(Temp.iRreadT2()>50)
+				  () -> assertTrue(Temp.iReadT1()<60),
+				  () -> assertTrue(Temp.iReadT2()>50)
 				  
 				);
 		
@@ -44,8 +44,8 @@ public class App5Test {
 			  () -> assertFalse(state.bValidateLowPerformance()) ,
 			  () -> assertEquals(1,Temp.validateCallReadT1),
 			  () -> assertEquals(1,Temp.validateCallReadT2),
-			  ()-> assertTrue(Temp.iRreadT1()<60),
-			  ()-> assertFalse(Temp.iRreadT2()>50)
+			  ()-> assertTrue(Temp.iReadT1()<60),
+			  ()-> assertFalse(Temp.iReadT2()>50)
 	  	);
 		
 	}
@@ -60,7 +60,7 @@ public class App5Test {
 		assertAll(
 			  () -> assertFalse(state.bValidateLowPerformance()) ,
 			  () -> assertEquals(1,Temp.validateCallReadT1),
-			  ()-> assertFalse(Temp.iRreadT1()<60)
+			  ()-> assertFalse(Temp.iReadT1()<60)
 	
 			  // because if False && True its not matter to check the second condition
 			  // () -> assertEquals(1,Temp.ValidateCallReadT2)

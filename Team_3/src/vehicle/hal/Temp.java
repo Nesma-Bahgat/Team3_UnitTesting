@@ -8,7 +8,7 @@ public class Temp
 	public static int returnOfReadT2;
 	public static int variableofTest;
 
-	public static int iRreadT1()
+	public static int iReadT1()
 	{
 		validateCallReadT1++;
 		if(variableofTest==1) return 30;
@@ -17,7 +17,7 @@ public class Temp
 		//return returnOfReadT1;
 	}
 	
-	public static int iRreadT2()
+	public static int iReadT2()
 	{
 		validateCallReadT2++;
 		if(variableofTest==1) return 60;
