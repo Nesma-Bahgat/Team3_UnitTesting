@@ -22,10 +22,12 @@ public class App5Test {
 		Temp.variableofTest=1;
 	    Temp.validateCallReadT1=0;
 	    Temp.validateCallReadT2=0;
+	    Temp.validateSeq="";
 		assertAll(
-				  () -> assertTrue(state.bValidateLowPerformance()) ,
+				  () -> assertTrue(state.bValidateLowPerformance() ) ,
 				  () -> assertEquals(1,Temp.validateCallReadT1),
 				  () -> assertEquals(1,Temp.validateCallReadT2),
+				  () -> assertEquals("ab",Temp.validateSeq),
 				  () -> assertTrue(Temp.iReadT1()<60),
 				  () -> assertTrue(Temp.iReadT2()>50)
 				  
@@ -40,10 +42,12 @@ public class App5Test {
 		Temp.variableofTest=2;
 	    Temp.validateCallReadT1=0;
 	    Temp.validateCallReadT2=0;
+	    Temp.validateSeq="";
 		assertAll(
 			  () -> assertFalse(state.bValidateLowPerformance()) ,
-			  () -> assertEquals(1,Temp.validateCallReadT1),
-			  () -> assertEquals(1,Temp.validateCallReadT2),
+			  () -> assertEquals(1,Temp.validateCallReadT1,"T1"),
+			  () -> assertEquals(1,Temp.validateCallReadT2,"T2"),
+			  () -> assertEquals("ab",Temp.validateSeq),
 			  ()-> assertTrue(Temp.iReadT1()<60),
 			  ()-> assertFalse(Temp.iReadT2()>50)
 	  	);
@@ -57,9 +61,12 @@ public class App5Test {
 		Temp.variableofTest=3;
 	    Temp.validateCallReadT1=0;
 	    Temp.validateCallReadT2=0;
+	    Temp.validateSeq="";
 		assertAll(
 			  () -> assertFalse(state.bValidateLowPerformance()) ,
 			  () -> assertEquals(1,Temp.validateCallReadT1),
+			  () -> assertEquals(0,Temp.validateCallReadT1),
+			  () -> assertEquals("a",Temp.validateSeq),
 			  ()-> assertFalse(Temp.iReadT1()<60)
 	
 			  // because if False && True its not matter to check the second condition
